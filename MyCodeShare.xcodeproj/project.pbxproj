@@ -18,6 +18,7 @@
 		08CD70561DACFE0600E863F8 /* My_CSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70551DACFE0600E863F8 /* My_CSHomeViewController.swift */; };
 		08CD70581DACFE5400E863F8 /* My_CSMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */; };
 		08D6459B1DAD066000D64011 /* My_UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6459A1DAD066000D64011 /* My_UITextField.swift */; };
+		08D6459D1DAD0FA800D64011 /* My_UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6459C1DAD0FA800D64011 /* My_UIButton.swift */; };
 		67BFF89B279DE847F28F5824 /* Pods_MyCodeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCA19FF7E4E3CFC5326EEC /* Pods_MyCodeShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		08CD70551DACFE0600E863F8 /* My_CSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSHomeViewController.swift; sourceTree = "<group>"; };
 		08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSMessageViewController.swift; sourceTree = "<group>"; };
 		08D6459A1DAD066000D64011 /* My_UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UITextField.swift; sourceTree = "<group>"; };
+		08D6459C1DAD0FA800D64011 /* My_UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UIButton.swift; sourceTree = "<group>"; };
 		41B4600ACE8C451CB7B3B76E /* Pods-MyCodeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCodeShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCodeShare/Pods-MyCodeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C04EB73B1E4D3A535C6DB987 /* Pods-MyCodeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCodeShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCodeShare/Pods-MyCodeShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				08D6459A1DAD066000D64011 /* My_UITextField.swift */,
+				08D6459C1DAD0FA800D64011 /* My_UIButton.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				08CD70521DACFC5B00E863F8 /* My_CSLoginViewController.swift in Sources */,
 				08CD703B1DACFA9A00E863F8 /* ViewController.swift in Sources */,
 				08CD70541DACFC7000E863F8 /* My_CSResgerViewController.swift in Sources */,
+				08D6459D1DAD0FA800D64011 /* My_UIButton.swift in Sources */,
 				08D6459B1DAD066000D64011 /* My_UITextField.swift in Sources */,
 				08CD70501DACFC3100E863F8 /* My_CSViewController.swift in Sources */,
 				08CD70391DACFA9A00E863F8 /* AppDelegate.swift in Sources */,

@@ -18,7 +18,10 @@ extension UITextField{
         textField.autocorrectionType = .No
         textField.clearButtonMode = .Always
         textField.borderStyle = .RoundedRect
+        textField.font=UIFont.systemFontOfSize(15)
         textField.secureTextEntry = isSecure
+        textField.layer.borderColor = UIColor.darkGrayColor().CGColor
+        textField.layer.borderWidth = 1.0
         target.view.addSubview(textField)
         textField.snp_makeConstraints { (make) in
             make.left.right.equalTo(0)
@@ -26,14 +29,15 @@ extension UITextField{
             if supView == nil {
                 make.top.equalTo(height)
             }else{
-                make.top.equalTo(supView!).offset(height)
+                make.top.equalTo(supView!.snp_bottom).offset(height)
             }
         }
         let leftView = UIView()
         let leftImageView = UIImageView()
         leftImageView.image = UIImage(named: leftImage)
         leftView.addSubview(leftImageView)
-        leftView.frame.size = CGSizeMake(64, 48)
+        leftView.frame = CGRectMake(0, 0, 64, 48)
+        leftImageView.frame.size=CGSizeMake(24, 28)
         leftImageView.center = leftView.center
         textField.leftView = leftView
         textField.leftViewMode = .Always
