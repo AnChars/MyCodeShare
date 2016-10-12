@@ -27,7 +27,7 @@ class My_CSLoginViewController: UIViewController {
     }
     
     func configNavButton(){
-        let regButton = UIButton.configButton("注册", colorNormal: UIColor.whiteColor(), colorHighlighted: nil, colorDisabled: nil, UIControlJKActionBlock: { (button) in
+        let regButton = UIButton.configButton("注册", colorNormal: nil, colorHighlighted: nil, colorDisabled: nil, UIControlJKActionBlock: { (button) in
             self.navigationController?.pushViewController(My_CSResgerViewController(), animated: true)
         })
         regButton.frame = CGRectMake(0, 0, 50, 40)
@@ -58,7 +58,7 @@ class My_CSLoginViewController: UIViewController {
             make.width.equalTo(100)
         })
         
-        self.loginButton = UIButton.configButton("登录", colorNormal: UIColor.greenColor(), colorHighlighted: UIColor.darkGrayColor(), colorDisabled: UIColor.whiteColor(), target: self, supView: self.button, height: 50, UIControlJKActionBlock: {
+        self.loginButton = UIButton.configButton("登录", colorNormal: UIColor.greenColor(), colorHighlighted: UIColor.darkGrayColor(), colorDisabled: UIColor.whiteColor(), target: self, supView: nil, height: 0, UIControlJKActionBlock: {
                 [weak self]
                 (button) in
                 Alamofire.request(.POST, "https://www.1000phone.tk", parameters: [
@@ -67,15 +67,29 @@ class My_CSLoginViewController: UIViewController {
                 "password":self!.passWord!.text!,
                 ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: {
                 (response) in
-                if response.result.isSuccess{
-                print(response.result.value!)
-                self!.navigationController?.popViewControllerAnimated(true)
-                }else{
-                print("网络不通畅")
-                }
+                    if response.result.isSuccess{
+                        
+                    }else{
+                        dispatch_async(dispatch_get_main_queue(), {
+                            MyUtil.showAlertMsg("网络不给力", onViewController: self!)
+                        })
+                    }
             })
         })
-        
+        NSNotificationCenter.defaultCenter().rac_addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil)
+            .subscribeNext { (ntoi) in
+                let userInfo = (ntoi as! NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey]
+                let rect = userInfo as! NSValue
+                
+                self.loginButton!.snp_updateConstraints(closure: { (make) in
+                    make.height.equalTo(48)
+                    let y = UIScreen.mainScreen().bounds.height - rect.CGRectValue().origin.y
+                    make.bottom.equalTo(-y)
+                })
+                UIView.animateWithDuration(0.25, animations: {
+                    self.loginButton!.layoutIfNeeded()
+                })
+        }
     }
     
     override func didReceiveMemoryWarning() {

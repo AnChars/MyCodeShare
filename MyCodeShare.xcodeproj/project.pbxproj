@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0811232C1DAE603800442390 /* MyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811232B1DAE603800442390 /* MyUtil.swift */; };
 		08CD70391DACFA9A00E863F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70381DACFA9A00E863F8 /* AppDelegate.swift */; };
 		08CD703B1DACFA9A00E863F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD703A1DACFA9A00E863F8 /* ViewController.swift */; };
 		08CD703E1DACFA9A00E863F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CD703C1DACFA9A00E863F8 /* Main.storyboard */; };
@@ -19,11 +20,13 @@
 		08CD70581DACFE5400E863F8 /* My_CSMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */; };
 		08D6459B1DAD066000D64011 /* My_UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6459A1DAD066000D64011 /* My_UITextField.swift */; };
 		08D6459D1DAD0FA800D64011 /* My_UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6459C1DAD0FA800D64011 /* My_UIButton.swift */; };
+		08D645A21DAE4B9A00D64011 /* MyFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D645A11DAE4B9A00D64011 /* MyFoundation.swift */; };
 		67BFF89B279DE847F28F5824 /* Pods_MyCodeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCA19FF7E4E3CFC5326EEC /* Pods_MyCodeShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01FCA19FF7E4E3CFC5326EEC /* Pods_MyCodeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCodeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0811232B1DAE603800442390 /* MyUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtil.swift; sourceTree = "<group>"; };
 		08CD70351DACFA9900E863F8 /* MyCodeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCodeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CD70381DACFA9A00E863F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CD703A1DACFA9A00E863F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,8 @@
 		08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSMessageViewController.swift; sourceTree = "<group>"; };
 		08D6459A1DAD066000D64011 /* My_UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UITextField.swift; sourceTree = "<group>"; };
 		08D6459C1DAD0FA800D64011 /* My_UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UIButton.swift; sourceTree = "<group>"; };
+		08D645A11DAE4B9A00D64011 /* MyFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFoundation.swift; sourceTree = "<group>"; };
+		08D645A31DAE4B9F00D64011 /* CodeShareHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeShareHeader.h; sourceTree = "<group>"; };
 		41B4600ACE8C451CB7B3B76E /* Pods-MyCodeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCodeShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCodeShare/Pods-MyCodeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C04EB73B1E4D3A535C6DB987 /* Pods-MyCodeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCodeShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCodeShare/Pods-MyCodeShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +89,9 @@
 				08CD703C1DACFA9A00E863F8 /* Main.storyboard */,
 				08CD703F1DACFA9A00E863F8 /* Assets.xcassets */,
 				08CD70411DACFA9A00E863F8 /* LaunchScreen.storyboard */,
+				0811232B1DAE603800442390 /* MyUtil.swift */,
+				08D645A11DAE4B9A00D64011 /* MyFoundation.swift */,
+				08D645A31DAE4B9F00D64011 /* CodeShareHeader.h */,
 				08CD70441DACFA9A00E863F8 /* Info.plist */,
 			);
 			path = MyCodeShare;
@@ -271,6 +279,8 @@
 				08CD70501DACFC3100E863F8 /* My_CSViewController.swift in Sources */,
 				08CD70391DACFA9A00E863F8 /* AppDelegate.swift in Sources */,
 				08CD70561DACFE0600E863F8 /* My_CSHomeViewController.swift in Sources */,
+				0811232C1DAE603800442390 /* MyUtil.swift in Sources */,
+				08D645A21DAE4B9A00D64011 /* MyFoundation.swift in Sources */,
 				08CD70581DACFE5400E863F8 /* My_CSMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +399,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoGuoGe.MyCodeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyCodeShare/CodeShareHeader.h";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -401,6 +413,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoGuoGe.MyCodeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyCodeShare/CodeShareHeader.h";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};

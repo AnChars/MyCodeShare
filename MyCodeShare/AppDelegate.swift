@@ -18,9 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.configWindow()
+        self.setUpMob()
         return true
     }
-    
+    /**
+     设置MObSMSSDK
+     */
+    func setUpMob(){
+        SMSSDK.registerApp(MobApp1, withSecret: MobSecret1)
+    }
     func configWindow(){
         self.window=UIWindow()
         self.window?.frame=UIScreen.mainScreen().bounds
