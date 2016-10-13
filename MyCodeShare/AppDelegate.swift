@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      设置MObSMSSDK
      */
     func setUpMob(){
-        SMSSDK.registerApp(MobApp1, withSecret: MobSecret1)
+        SMSSDK.registerApp(MobApp, withSecret: MobSecret)
     }
     func configWindow(){
         self.window=UIWindow()

@@ -23,4 +23,7 @@ target 'MyCodeShare' do
     pod 'IQKeyboardManager', '~> 3.0'
     #全屏侧滑返回
     pod 'FDFullscreenPopGesture'
+    #JSON 与 Model  互转
+    pod 'YYModel'
+    
 end

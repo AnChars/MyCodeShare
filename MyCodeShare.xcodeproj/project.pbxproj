@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0811232C1DAE603800442390 /* MyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811232B1DAE603800442390 /* MyUtil.swift */; };
+		0820F4221DAF675400A30F92 /* My_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F4211DAF675400A30F92 /* My_UIColor.swift */; };
+		0820F4241DAF749800A30F92 /* My_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F4231DAF749800A30F92 /* My_UIViewController.swift */; };
+		0820F4261DAF818C00A30F92 /* My_CSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F4251DAF818C00A30F92 /* My_CSTableViewController.swift */; };
+		0820F4281DAF866200A30F92 /* My_CSMyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F4271DAF866200A30F92 /* My_CSMyVideoViewController.swift */; };
+		0820F42A1DAF876B00A30F92 /* My_CSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F4291DAF876B00A30F92 /* My_CSModel.swift */; };
+		0820F42D1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F42B1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.swift */; };
+		0820F42E1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0820F42C1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.xib */; };
+		0820F4301DAFAB9B00A30F92 /* My_CSMyTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820F42F1DAFAB9B00A30F92 /* My_CSMyTitleView.swift */; };
 		08CD70391DACFA9A00E863F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70381DACFA9A00E863F8 /* AppDelegate.swift */; };
 		08CD703B1DACFA9A00E863F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD703A1DACFA9A00E863F8 /* ViewController.swift */; };
 		08CD703E1DACFA9A00E863F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CD703C1DACFA9A00E863F8 /* Main.storyboard */; };
@@ -18,6 +26,8 @@
 		08CD70541DACFC7000E863F8 /* My_CSResgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70531DACFC7000E863F8 /* My_CSResgerViewController.swift */; };
 		08CD70561DACFE0600E863F8 /* My_CSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70551DACFE0600E863F8 /* My_CSHomeViewController.swift */; };
 		08CD70581DACFE5400E863F8 /* My_CSMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */; };
+		08CF677F1DAF205E00E772ED /* My_CSNetHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CF677E1DAF205E00E772ED /* My_CSNetHelp.swift */; };
+		08CF67811DAF3BF900E772ED /* My_CSUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CF67801DAF3BF900E772ED /* My_CSUsersModel.swift */; };
 		08D6459B1DAD066000D64011 /* My_UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6459A1DAD066000D64011 /* My_UITextField.swift */; };
 		08D6459D1DAD0FA800D64011 /* My_UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6459C1DAD0FA800D64011 /* My_UIButton.swift */; };
 		08D645A21DAE4B9A00D64011 /* MyFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D645A11DAE4B9A00D64011 /* MyFoundation.swift */; };
@@ -27,6 +37,14 @@
 /* Begin PBXFileReference section */
 		01FCA19FF7E4E3CFC5326EEC /* Pods_MyCodeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCodeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0811232B1DAE603800442390 /* MyUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtil.swift; sourceTree = "<group>"; };
+		0820F4211DAF675400A30F92 /* My_UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UIColor.swift; sourceTree = "<group>"; };
+		0820F4231DAF749800A30F92 /* My_UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UIViewController.swift; sourceTree = "<group>"; };
+		0820F4251DAF818C00A30F92 /* My_CSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSTableViewController.swift; sourceTree = "<group>"; };
+		0820F4271DAF866200A30F92 /* My_CSMyVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSMyVideoViewController.swift; sourceTree = "<group>"; };
+		0820F4291DAF876B00A30F92 /* My_CSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSModel.swift; sourceTree = "<group>"; };
+		0820F42B1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSMyVideoTableViewCell.swift; sourceTree = "<group>"; };
+		0820F42C1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = My_CSMyVideoTableViewCell.xib; sourceTree = "<group>"; };
+		0820F42F1DAFAB9B00A30F92 /* My_CSMyTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSMyTitleView.swift; sourceTree = "<group>"; };
 		08CD70351DACFA9900E863F8 /* MyCodeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCodeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CD70381DACFA9A00E863F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CD703A1DACFA9A00E863F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +57,8 @@
 		08CD70531DACFC7000E863F8 /* My_CSResgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSResgerViewController.swift; sourceTree = "<group>"; };
 		08CD70551DACFE0600E863F8 /* My_CSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSHomeViewController.swift; sourceTree = "<group>"; };
 		08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSMessageViewController.swift; sourceTree = "<group>"; };
+		08CF677E1DAF205E00E772ED /* My_CSNetHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSNetHelp.swift; sourceTree = "<group>"; };
+		08CF67801DAF3BF900E772ED /* My_CSUsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_CSUsersModel.swift; sourceTree = "<group>"; };
 		08D6459A1DAD066000D64011 /* My_UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UITextField.swift; sourceTree = "<group>"; };
 		08D6459C1DAD0FA800D64011 /* My_UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_UIButton.swift; sourceTree = "<group>"; };
 		08D645A11DAE4B9A00D64011 /* MyFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFoundation.swift; sourceTree = "<group>"; };
@@ -80,6 +100,7 @@
 		08CD70371DACFA9A00E863F8 /* MyCodeShare */ = {
 			isa = PBXGroup;
 			children = (
+				08CF677D1DAF1FF100E772ED /* Help */,
 				08D645991DAD062000D64011 /* extension */,
 				08CD704C1DACFB9000E863F8 /* Controller */,
 				08CD704B1DACFB8200E863F8 /* View */,
@@ -89,9 +110,6 @@
 				08CD703C1DACFA9A00E863F8 /* Main.storyboard */,
 				08CD703F1DACFA9A00E863F8 /* Assets.xcassets */,
 				08CD70411DACFA9A00E863F8 /* LaunchScreen.storyboard */,
-				0811232B1DAE603800442390 /* MyUtil.swift */,
-				08D645A11DAE4B9A00D64011 /* MyFoundation.swift */,
-				08D645A31DAE4B9F00D64011 /* CodeShareHeader.h */,
 				08CD70441DACFA9A00E863F8 /* Info.plist */,
 			);
 			path = MyCodeShare;
@@ -100,6 +118,8 @@
 		08CD704A1DACFB7A00E863F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				08CF67801DAF3BF900E772ED /* My_CSUsersModel.swift */,
+				0820F4291DAF876B00A30F92 /* My_CSModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -107,6 +127,8 @@
 		08CD704B1DACFB8200E863F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0820F42B1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.swift */,
+				0820F42C1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -114,20 +136,36 @@
 		08CD704C1DACFB9000E863F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0820F4251DAF818C00A30F92 /* My_CSTableViewController.swift */,
 				08CD704F1DACFC3100E863F8 /* My_CSViewController.swift */,
+				08CD70551DACFE0600E863F8 /* My_CSHomeViewController.swift */,
 				08CD70571DACFE5400E863F8 /* My_CSMessageViewController.swift */,
 				08CD70511DACFC5B00E863F8 /* My_CSLoginViewController.swift */,
 				08CD70531DACFC7000E863F8 /* My_CSResgerViewController.swift */,
-				08CD70551DACFE0600E863F8 /* My_CSHomeViewController.swift */,
+				0820F4271DAF866200A30F92 /* My_CSMyVideoViewController.swift */,
+				0820F42F1DAFAB9B00A30F92 /* My_CSMyTitleView.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		08CF677D1DAF1FF100E772ED /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				0811232B1DAE603800442390 /* MyUtil.swift */,
+				08D645A11DAE4B9A00D64011 /* MyFoundation.swift */,
+				08D645A31DAE4B9F00D64011 /* CodeShareHeader.h */,
+				08CF677E1DAF205E00E772ED /* My_CSNetHelp.swift */,
+			);
+			name = Help;
 			sourceTree = "<group>";
 		};
 		08D645991DAD062000D64011 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				0820F4211DAF675400A30F92 /* My_UIColor.swift */,
 				08D6459A1DAD066000D64011 /* My_UITextField.swift */,
 				08D6459C1DAD0FA800D64011 /* My_UIButton.swift */,
+				0820F4231DAF749800A30F92 /* My_UIViewController.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -211,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CD70431DACFA9A00E863F8 /* LaunchScreen.storyboard in Resources */,
+				0820F42E1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.xib in Resources */,
 				08CD70401DACFA9A00E863F8 /* Assets.xcassets in Resources */,
 				08CD703E1DACFA9A00E863F8 /* Main.storyboard in Resources */,
 			);
@@ -271,16 +310,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0820F4221DAF675400A30F92 /* My_UIColor.swift in Sources */,
+				0820F4241DAF749800A30F92 /* My_UIViewController.swift in Sources */,
+				0820F4281DAF866200A30F92 /* My_CSMyVideoViewController.swift in Sources */,
+				0820F4301DAFAB9B00A30F92 /* My_CSMyTitleView.swift in Sources */,
+				08CF677F1DAF205E00E772ED /* My_CSNetHelp.swift in Sources */,
 				08CD70521DACFC5B00E863F8 /* My_CSLoginViewController.swift in Sources */,
 				08CD703B1DACFA9A00E863F8 /* ViewController.swift in Sources */,
 				08CD70541DACFC7000E863F8 /* My_CSResgerViewController.swift in Sources */,
 				08D6459D1DAD0FA800D64011 /* My_UIButton.swift in Sources */,
 				08D6459B1DAD066000D64011 /* My_UITextField.swift in Sources */,
+				0820F42D1DAF8A4D00A30F92 /* My_CSMyVideoTableViewCell.swift in Sources */,
 				08CD70501DACFC3100E863F8 /* My_CSViewController.swift in Sources */,
 				08CD70391DACFA9A00E863F8 /* AppDelegate.swift in Sources */,
 				08CD70561DACFE0600E863F8 /* My_CSHomeViewController.swift in Sources */,
 				0811232C1DAE603800442390 /* MyUtil.swift in Sources */,
+				08CF67811DAF3BF900E772ED /* My_CSUsersModel.swift in Sources */,
 				08D645A21DAE4B9A00D64011 /* MyFoundation.swift in Sources */,
+				0820F42A1DAF876B00A30F92 /* My_CSModel.swift in Sources */,
+				0820F4261DAF818C00A30F92 /* My_CSTableViewController.swift in Sources */,
 				08CD70581DACFE5400E863F8 /* My_CSMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

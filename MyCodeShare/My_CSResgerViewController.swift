@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import ReactiveCocoa
 import JKCategories
-class My_CSResgerViewController: UIViewController {
+class My_CSResgerViewController: ViewController {
 
     private var userName:UITextField?
     private var passWord:UITextField?
@@ -132,32 +132,35 @@ class My_CSResgerViewController: UIViewController {
         self.button?.enabled = false
         self.codeText?.rightView = subView
         self.codeText?.rightViewMode = .Always
-        self.regButton = UIButton.configButton("注册", colorNormal: UIColor.greenColor(), colorHighlighted: UIColor.whiteColor(), colorDisabled: UIColor.darkGrayColor(), target: self, supView: nil, height: 0, UIControlJKActionBlock: {
+        self.regButton = UIButton.configButton("注册", colorNormal: UIColor.randomColor(), colorHighlighted: UIColor.whiteColor(), colorDisabled: UIColor.darkGrayColor(), target: self, supView: nil, height: 0, UIControlJKActionBlock: {
             [weak self]
             (button) in
             if self != nil {
-                Alamofire.request(.POST, "https://www.1000phone.tk", parameters: [
+                My_CSNetHelp.request(parameters: [
                     "service":"User.Register",
                     "phone":self!.userName!.text!,
-                    "password":self!.passWord!.text!,
+                    "password":(self!.passWord!.text! as NSString).jk_md5String,
                     "verificationCode":self!.codeText!.text!,
-                    ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: {
-                        (response) in
-                        if response.result.isSuccess{
-                            dispatch_async(dispatch_get_main_queue(), { 
-                                MyUtil.showAlertMsg1("注册成功!是否返回登录界面?", onViewController: self!, bb: { 
+                    ]).responseJSON({
+                        [weak self]
+                        (data, success) in
+                        if self != nil{
+                            if success {
+                                MyUtil.showAlertMsg1("注册成功!是否返回登录界面?", onViewController: self!, bb: {
+                                    
                                     self!.navigationController?.popViewControllerAnimated(true)
                                     }, aa: {
                                 })
-                            })
-                        }else{
-                            dispatch_async(dispatch_get_main_queue(), { 
-                                MyUtil.showAlertMsg("网络不给力", onViewController: self!)
-                            })
+                            }else{
+                                MyUtil.showAlertMsg(data as! String, onViewController: self!)
+                            }
                         }
                     })
             }
         })
         self.regButton?.enabled = false
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

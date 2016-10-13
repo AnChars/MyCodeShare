@@ -15,25 +15,26 @@ class My_CSViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         self.configTabBar()
+        self.tabBar.tintColor=UIColor ( red: 0.7131, green: 0.9034, blue: 0.2, alpha: 1.0 )
     }
     
     func configTabBar(){
         let tabbarSubViews = [
             ["title":"主页",
-            "image":"tabbar_1",
+            "image":"按钮主页",
             "class":"Home"
             ],
             ["title":"消息",
-            "image":"tabbar_1",
+            "image":"按钮消息",
             "class":"Message"
             ],
             ["title":"分享",
-            "image":"tabbar_1",
+            "image":"按钮分享",
             "class":"Message"
             ],
             ["title":"我的",
-            "image":"tabbar_1",
-            "class":"Message",
+            "image":"按钮我的",
+            "class":"MyVideo",
             ]
         ]
         var navs = [UINavigationController]()
@@ -45,6 +46,12 @@ class My_CSViewController: UITabBarController {
             navs.append(nvc)
         }
         self.viewControllers = navs
+        
+        for item in self.tabBar.items!{
+            let index = self.tabBar.items?.indexOf(item)
+            item.image = UIImage(named: tabbarSubViews[index!]["image"]!)
+            item.selectedImage = UIImage(named: tabbarSubViews[index!]["image"]!+"-点击")
+        }
     }
     
     

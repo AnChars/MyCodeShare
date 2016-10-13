@@ -8,17 +8,14 @@
 
 import UIKit
 /// 消息
-class My_CSMessageViewController: UIViewController {
+class My_CSMessageViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.presentViewController(UINavigationController(rootViewController: My_CSLoginViewController()), animated: true, completion: nil)
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

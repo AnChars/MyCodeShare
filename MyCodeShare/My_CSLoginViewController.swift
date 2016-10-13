@@ -8,13 +8,14 @@
 
 import UIKit
 import Alamofire
-class My_CSLoginViewController: UIViewController {
+class My_CSLoginViewController: ViewController {
 
     private var userName:UITextField?
     private var passWord:UITextField?
     
     private var loginButton:UIButton?
     private var button:UIButton?
+    var comBolk:((name: String, pass: String)->Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,21 +25,25 @@ class My_CSLoginViewController: UIViewController {
         self.configTextField()
         self.configButton()
         self.configNavButton()
+        self.userName?.text = "13519182823"
+        self.passWord?.text = "475869"
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        self.viewWillAppear(animated)
+    }
     func configNavButton(){
         let regButton = UIButton.configButton("注册", colorNormal: nil, colorHighlighted: nil, colorDisabled: nil, UIControlJKActionBlock: { (button) in
             self.navigationController?.pushViewController(My_CSResgerViewController(), animated: true)
         })
         regButton.frame = CGRectMake(0, 0, 50, 40)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: regButton)
-        let back = UIButton(type: .Custom)
-        back.frame=CGRectMake(0, 0, 22, 44)
-        back.setImage(UIImage(named: "返回按钮"), forState: .Normal)
-        back.jk_handleControlEvents(.TouchUpInside) { (back) in
-            self.navigationController?.popViewControllerAnimated(true)
-        }
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: back)
+//        let back = UIButton(type: .Custom)
+//        back.frame=CGRectMake(0, 0, 22, 44)
+//        back.setImage(UIImage(named: "返回按钮"), forState: .Normal)
+//        back.jk_handleControlEvents(.TouchUpInside) { (back) in
+//            self.navigationController?.popViewControllerAnimated(true)
+//        }
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: back)
     }
 
     func configTextField(){
@@ -47,9 +52,10 @@ class My_CSLoginViewController: UIViewController {
     }
     
     func configButton(){
-        self.button = UIButton.configButton("忘记密码？", colorNormal: UIColor.whiteColor(), colorHighlighted: UIColor.darkGrayColor(), colorDisabled: UIColor.greenColor(), UIControlJKActionBlock: { (button) in
+        self.button = UIButton.configButton("忘记密码？", colorNormal: UIColor.whiteColor(), colorHighlighted: UIColor.whiteColor(), colorDisabled: UIColor.greenColor(), UIControlJKActionBlock: { (button) in
             print("忘记密码")
         })
+        self.button?.setTitleColor(UIColor.darkGrayColor(), forState: .Disabled)
         self.view.addSubview(self.button!)
         self.button?.snp_makeConstraints(closure: { (make) in
             make.top.equalTo(passWord!.snp_bottom).offset(50)
@@ -58,23 +64,28 @@ class My_CSLoginViewController: UIViewController {
             make.width.equalTo(100)
         })
         
-        self.loginButton = UIButton.configButton("登录", colorNormal: UIColor.greenColor(), colorHighlighted: UIColor.darkGrayColor(), colorDisabled: UIColor.whiteColor(), target: self, supView: nil, height: 0, UIControlJKActionBlock: {
+        self.loginButton = UIButton.configButton("登录", colorNormal: UIColor.randomColor(), colorHighlighted: UIColor.darkGrayColor(), colorDisabled: UIColor.whiteColor(), target: self, supView: nil, height: 0, UIControlJKActionBlock: {
                 [weak self]
                 (button) in
-                Alamofire.request(.POST, "https://www.1000phone.tk", parameters: [
+            My_CSNetHelp.request(parameters: [
                 "service":"User.Login",
                 "phone":self!.userName!.text!,
-                "password":self!.passWord!.text!,
-                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: {
-                (response) in
-                    if response.result.isSuccess{
-                        
-                    }else{
-                        dispatch_async(dispatch_get_main_queue(), {
-                            MyUtil.showAlertMsg("网络不给力", onViewController: self!)
-                        })
+                "password":(self!.passWord!.text! as NSString).jk_md5String,
+                ]).responseJSON({
+                    [weak self]
+                    (data, success) in
+                    if self != nil{
+                        if success {
+                            /**
+                             *  配置 用户数据
+                             */
+                            My_CSUsersModel.login(With: data as! [String: AnyObject])
+                            self?.dismissViewControllerAnimated(true, completion: nil)
+                        }else{
+                            MyUtil.showAlertMsg(data as! String, onViewController: self!)
+                        }
                     }
-            })
+                })
         })
         NSNotificationCenter.defaultCenter().rac_addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil)
             .subscribeNext { (ntoi) in
@@ -91,7 +102,9 @@ class My_CSLoginViewController: UIViewController {
                 })
         }
     }
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

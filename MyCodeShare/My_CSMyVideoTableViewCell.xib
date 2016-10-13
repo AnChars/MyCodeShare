@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="176" id="KGk-i7-Jjw" customClass="My_CSMyVideoTableViewCell" customModule="MyCodeShare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="176"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="175"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="视频" translatesAutoresizingMaskIntoConstraints="NO" id="Imx-xq-GLo" userLabel="Imageview">
+                        <rect key="frame" x="8" y="46" width="167" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="84" id="RPV-io-0M4"/>
+                            <constraint firstAttribute="width" constant="167" id="Sau-Aa-768"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHb-k6-9ZC">
+                        <rect key="frame" x="195" y="112" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-2u-T11">
+                        <rect key="frame" x="195" y="46" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LHb-k6-9ZC" firstAttribute="leading" secondItem="Imx-xq-GLo" secondAttribute="trailing" constant="20" id="513-ct-cro"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Ahi-2u-T11" secondAttribute="trailing" constant="20" id="5Cr-M1-Btw"/>
+                    <constraint firstItem="Ahi-2u-T11" firstAttribute="leading" secondItem="Imx-xq-GLo" secondAttribute="trailing" constant="20" id="LUq-EI-h42"/>
+                    <constraint firstItem="Imx-xq-GLo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NfO-bk-2F4"/>
+                    <constraint firstItem="LHb-k6-9ZC" firstAttribute="bottom" secondItem="Imx-xq-GLo" secondAttribute="bottom" id="VjA-6D-PcS"/>
+                    <constraint firstItem="Imx-xq-GLo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="w1v-rQ-1kD"/>
+                    <constraint firstItem="Ahi-2u-T11" firstAttribute="top" secondItem="Imx-xq-GLo" secondAttribute="top" id="xBA-bU-faI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageview" destination="Imx-xq-GLo" id="fJj-6K-1gx"/>
+                <outlet property="sizeLable" destination="LHb-k6-9ZC" id="mzK-Jk-rNx"/>
+                <outlet property="title" destination="Ahi-2u-T11" id="nGA-ht-zZh"/>
+            </connections>
+            <point key="canvasLocation" x="382.5" y="365"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="视频" width="621" height="317"/>
+    </resources>
+</document>

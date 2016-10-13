@@ -8,14 +8,19 @@
 
 import UIKit
 
-class My_CSHomeViewController: UIViewController {
+class My_CSHomeViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if My_CSUsersModel.isLogin() == false{
+           self.presentViewController(UINavigationController(rootViewController: My_CSLoginViewController()), animated: true, completion: nil)
+        }
+    }
     
 
     override func didReceiveMemoryWarning() {
